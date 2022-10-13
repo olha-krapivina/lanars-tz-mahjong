@@ -1,13 +1,100 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+
+  padding: 0;
+  margin: 0 0 50px 0;
+}
+
+._container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 745px;
+  height: 445px;
+  gap: 15px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  background: #fff;
+  border: 0.5px solid #cdcdcd;
+  border-radius: 8px;
+
+  transition: 1s;
+
+  cursor: pointer;
+}
+
+.cell span {
+  transform: scale(0);
+  animation: 3s hideNumber linear;
+}
+
+@keyframes hideNumber {
+  0%,
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.cell:hover {
+  filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.cell.active {
+  border: 0.5px solid #ed5517;
+}
+
+.cell.active span {
+  transform: scale(1);
+}
+
+.cell.correct {
+  border: 1px solid #0a0a0c;
 }
