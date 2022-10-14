@@ -21,6 +21,22 @@ function Field() {
       { id: 7, number: "7", stat: "" },
       { id: 8, number: "8", stat: "" },
       { id: 8, number: "8", stat: "" },
+      { id: 9, number: "9", stat: "" },
+      { id: 9, number: "9", stat: "" },
+      { id: 10, number: "10", stat: "" },
+      { id: 10, number: "10", stat: "" },
+      { id: 11, number: "11", stat: "" },
+      { id: 11, number: "11", stat: "" },
+      { id: 12, number: "12", stat: "" },
+      { id: 12, number: "12", stat: "" },
+      { id: 13, number: "13", stat: "" },
+      { id: 13, number: "13", stat: "" },
+      { id: 14, number: "14", stat: "" },
+      { id: 14, number: "14", stat: "" },
+      { id: 15, number: "15", stat: "" },
+      { id: 15, number: "15", stat: "" },
+      { id: 16, number: "16", stat: "" },
+      { id: 16, number: "16", stat: "" },
     ].sort(() => Math.random() - 0.5)
   );
 
